@@ -78,6 +78,25 @@
 audio {
   display: none;
 }
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: #264d3c;
+      color: #ffffff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.7rem;
+      transition: background 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #3a6b54;
+    }
   </style>
 </head>
 <body>
@@ -100,6 +119,10 @@ audio {
     <audio id="audio" src="vm.mp3"></audio>
   </div>
 
+  <div class="back-button">
+    <a href="index.html">← Back to Home</a>
+  </div>
+  
   <script>
     const audio = document.getElementById('audio');
     const playBtn = document.getElementById('playPause');
