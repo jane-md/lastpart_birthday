@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Plans Together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff8f4;
+      color: #264d3c;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .plans-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .plans-header h4 {
+      margin: 0;
+      font-size: 0.7rem;
+      color: #264d3c;
+    }
+
+    .header-gif {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .plan-card {
+      background-color: #ffffff;
+      border: 1.3px solid #e0e0e0;
+      border-radius: 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      margin-bottom: 1rem;
+      padding: 0.8rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      max-width: 600px;
+    }
+
+    .plan-card:hover {
+      background-color: #f9f9f9;
+    }
+
+    .plan-card h2 {
+      font-size: 0.8rem;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .reveal-content {
+      display: none;
+      margin-top: 0.5rem;
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .plan-card.active .reveal-content {
+      display: block;
+    }
+
+    .plan-card img {
+      width: 225px;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 12px;
+      margin-bottom: 0.8rem;
+    }
+
+    .plan-card p {
+      font-size: 0.60rem;
+      margin: 0.1rem;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-button a {
+      background-color: #264d3c;
+      color: #ffffff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.7rem;
+      transition: background 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #3a6b54;
+    }
+    
+    .last1-gif {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-left: 5px;
+  margin-right: 90px;
+  margin-top: 20px;
+  margin-bottom: -60px;
+  
+}
+
+.last2-gif {
+  width: 100px; /* 0.5px was too small to see */
+  height: 100px;
+  object-fit: contain;
+  margin-left: 100px;
+  margin-right: 20px;
+  top: 10px;
+  
+}
+
+/* New container styles */
+.gif-row {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+
+.right-align {
+  text-align: right;
+}
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="plans-header">
+    <img src="left.gif" alt="Left gif" class="header-gif">
+    <h4>Our plans together ♡♡♡</h4>
+    <img src="left.gif" alt="left gif" class="header-gif">
+  </div>
+
+  <div class="plan-card" onclick="toggleReveal(this)">
+    <h2>MOVIE NIGHTS</h2>
+    <div class="reveal-content">
+      <img src="movie-night.gif" alt="Couple watching movie GIF">
+      <p>One day, we will finally watch a movie together baby, no more calls, just you and me, magkatabi. We will share a blanket, eat snacks, and enjoy every moment even if we don't talk much po. As long as ikaw yung katabi ko, I am very happy na. </p>
+    </div>
+  </div>
+
+  <div class="plan-card" onclick="toggleReveal(this)">
+    <h2>LATE NIGHT TALKS</h2>
+    <div class="reveal-content">
+      <img src="talk.gif" alt="Concert crowd GIF">
+      <p>We'll still talk late at night, but this time, magkasama na tayo while we laugh and talk about anything, my baby. No more goodnights through the phone, just us together and holding hands.</p>
+    </div>
+  </div>
+
+  <div class="plan-card" onclick="toggleReveal(this)">
+    <h2>LONG HUGS</h2>
+    <div class="reveal-content">
+      <img src="cuddle.gif" alt="Couple hugging GIF">
+      <p>I'll finally get to hug you for real na, not just in words or imagination. 
+I will hug you tight kase ang tagal nating hinintay yon. </p>
+    </div>
+  </div>
+
+  <div class="plan-card" onclick="toggleReveal(this)">
+    <h2>FOOD TRIP TOGETHER</h2>
+    <div class="reveal-content">
+      <img src="foodtrip.gif" alt="Street food GIF">
+      <p>Food date, baby? my treat. We will eat everything you love, my baby. Lahat ng favorite food mo tatandaan ko.  Save dessert for later...</p>
+    </div>
+  </div>
+
+  <div class="plan-card" onclick="toggleReveal(this)">
+    <h2>LITTLE TRAVELS</h2>
+    <div class="reveal-content">
+      <img src="travel.gif" alt="Couple travel GIF">
+      <p>It doesn't matter where we go, as long as ikaw yung kasama ko. Beach? Mountains? Camping? Kahit nga short walk lang baby eh, magiging special yon kase kasama kita. Mag t-take tayo ng maraming pictures together.</p>
+    </div>
+  </div>
+
+  <div class="back-button">
+    <a href="home.html">← Back to Home</a>
+  </div>
+  
+ 
+
+  <div class="gif-row">
+  <img src="last1.gif" class="last1-gif" alt="Left GIF">
+</div>
+
+
+  
+  
+  <script>
+    function toggleReveal(card) {
+      card.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
